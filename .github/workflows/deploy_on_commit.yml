@@ -3,6 +3,7 @@ name: Deploy to host
 on:
   push:
     branches:
+      - main
       - master
       - feature/*
   workflow_dispatch:
