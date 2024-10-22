@@ -2,6 +2,11 @@
  * CSS Personnalisé pour l'application médose
  */
 
+@font-face {
+    font-family: 'medose';
+    src: url('../../KodeMono-VariableFont_wght.ttf') format('truetype');
+}
+
 #nfc_connected {
     display: flex;
     flex-direction: row;
