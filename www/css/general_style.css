@@ -37,7 +37,7 @@ html, body {
 
 
 .informations {
-    color: #86A0FD;
+    color: var(--info-color, red);
     font-family: 'medose';
     font-size: 1.8em;
 }
@@ -50,7 +50,7 @@ p {
 }
 
 h1 {
-    color: #2720FF;
+    color: var(--title-color, red);
     font-family: 'medose';
     font-size: 6em;
 }
@@ -61,5 +61,5 @@ input {
     font-size: 1.5em;
     font-family: 'medose';
     border: none;
-    background-color: #FAF8F8;
+    background-color: var(--input-background-color, red);
 }
