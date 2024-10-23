@@ -7,3 +7,10 @@ function send_message() {
     var message = "test"
     window.AppInventor.setWebViewString(message);
 }
+
+function scan_result(text) {
+    // trigger alert
+    alert(text);
+    document.getElementById("footer").innerHTML = text;
+    document.getElementById("scan_result").innerHTML = text;
+}

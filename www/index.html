@@ -1,1 +1,25 @@
-test dispatcher
+<!DOCTYPE>
+<html></html>
+    <head>
+        <title>Medose</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/variables.css">
+        <link rel="stylesheet" type="text/css" href="../css/general_style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="../img/medic.png" type="image/png">
+        <script src="./scripts.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <img src="../img/logo_medose.svg" alt="Medose logo" id="logo">
+            <h1 id="title">MÉDOSE</h1>
+        </div>
+        <div id="presentation">
+            <h2>Médose</h2>
+            <p>Cette application a pour objectif d'aider les médecins et les urgentistes à identifier les métriques de leurs patients (âge, poids et taille) et à calculer le bon dosage à administrer en fonction du médicament prescrit.</p>
+            <button id="medose" onclick="redirect('medisafe')">Accéder à Médose</button>
+            <h2>Médisafe</h2>
+            <p>Médisafe est une application destinées aux patients pour renseigner leurs informations médicales sur des supports NFC, disponibles sous forme de tags pour enfants, de cartes pour adultes et de bracelets pour les personnes âgées.</p>
+            <button id="medisafe" onclick="redirect('medisafe')">Accéder à Médisafe</button>
+        </div>
+    </body>
