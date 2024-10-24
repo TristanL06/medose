@@ -5,14 +5,6 @@
     --color-tertiary: #be4c84;
 }
 
-.cls-1 {
-    fill: var(--color-primary);
-}
-
-.cls-2 {
-    fill: var(--color-secondary);
-}
-
-.cls-3 {
-    fill: var(--color-tertiary);
+#nfc-logo {
+    width: 40%;
 }

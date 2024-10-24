@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("test").addEventListener("click", send_message);
+    send_message("read_nfc");
 });
 
 // send infomrations to MIT ai2 through the window.AppInventor object
-function send_message() {
-    var message = "test"
+function send_message(message = "default") {
     window.AppInventor.setWebViewString(message);
 }
 
