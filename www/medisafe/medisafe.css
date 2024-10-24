@@ -5,6 +5,23 @@
     --color-tertiary: #be4c84;
 }
 
-#nfc-logo {
-    width: 40%;
+#nfc_logo {
+    width: 30%;
+}
+
+#nfc  {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#medisafe_logo {
+    width: 100%;
+}
+
+#bottom-image {
+    position: absolute;
+    bottom: 0;
 }
