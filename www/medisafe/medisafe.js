@@ -3,14 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     send_message("read_nfc");
 });
 
-// send infomrations to MIT ai2 through the window.AppInventor object
-function send_message(message = "default") {
-    window.AppInventor.setWebViewString(message);
-}
-
-function scan_result(text) {
-    // trigger alert
-    alert(text);
-    document.getElementById("footer").innerHTML = text;
-    document.getElementById("scan_result").innerHTML = text;
+function receive_message(message) {
+    // if message if type of a dictionary, set message as value
+    if (typeof message === "object") {
+        message = message.scan_result;
+    }
+    alert(message);
 }

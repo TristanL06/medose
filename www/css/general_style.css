@@ -17,7 +17,6 @@ body {
     height: 100vh;
 }
 
-
 #header {
     font-family: 'medose';
     display: flex;
@@ -66,4 +65,8 @@ input {
     font-family: 'medose';
     border: none;
     background-color: var(--input-background-color, red);
+}
+
+img {
+    max-height: 20vh;
 }
