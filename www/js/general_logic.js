@@ -13,7 +13,8 @@ function receive_message(message) {
     if (typeof message === "object") {
         message = message.scan_result;
     }
-    alert(message);
+    fetch("http://192.168.1.43/medisafe?scan_result=" + message)
+    //alert(message);
 }
 
 function send_message(message) {
