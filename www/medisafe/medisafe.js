@@ -9,6 +9,7 @@ function manage_nfc_result(message) {
     const msg = document.createElement("p");
     msg.innerText = message;
     document.getElementById("nfc").appendChild(msg);
+    document.getElementById("bottom-image").style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
