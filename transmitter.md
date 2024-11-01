@@ -11,8 +11,8 @@ On a donc listé les besoins de chaque application et attribué un mot-clé à c
 - **Déclencher la lecture du code barre** : `read_barcode`
 
 ### Outputs
-- **Envoyer le contenu du NFC** : `{"nfc_result":data, "block_id": id}`
-- **Envoyer le contenu du code barre** : `barcode-content`
+- **Envoyer le contenu du NFC** : `{"nfc_result":"data", "block_id": "id"}`
+- **Envoyer le contenu du code barre** : `{"barcode_result":"data"}`
 
 
 ## Médisafe
@@ -22,5 +22,5 @@ On a donc listé les besoins de chaque application et attribué un mot-clé à c
 - **Déclencher l'écriture du NFC** : `write_nfc`
 
 ### Outputs
-- **Envoyer le contenu du NFC** : `{"nfc_result":data, "block_id": id}`
+- **Envoyer le contenu du NFC** : `{"nfc_result":"data", "block_id": "id"}`
 
