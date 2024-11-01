@@ -7,20 +7,20 @@ On a donc listé les besoins de chaque application et attribué un mot-clé à c
 ## Médose
 
 ### Inputs
-- **Passer le NFC en mode lecture** : `nfc_read`
-- **Déclencher la lecture du code barre** : `barcode_read`
+- **Passer le NFC en mode lecture** : `read_nfc`
+- **Déclencher la lecture du code barre** : `read_barcode`
 
 ### Outputs
-- **Envoyer le contenu du NFC** : `nfc-content`
+- **Envoyer le contenu du NFC** : `{"nfc_result":data, "block_id": id}`
 - **Envoyer le contenu du code barre** : `barcode-content`
 
 
 ## Médisafe
 
 ### Inputs
-- **Déclencher la lecture du NFC** : `nfc_read`
-- **Déclencher l'écriture du NFC** : `nfc_write`
+- **Déclencher la lecture du NFC** : `read_nfc`
+- **Déclencher l'écriture du NFC** : `write_nfc`
 
 ### Outputs
-- **Envoyer le contenu du NFC** : `nfc-content`
+- **Envoyer le contenu du NFC** : `{"nfc_result":data, "block_id": id}`
 
