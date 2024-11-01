@@ -1,22 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-    if (!window.AppInventor) { // if not in the app, display page in a smaller width
-        console.log("not in MIT AI2");
+class FunctionHolder {
+    constructor() {
+        this.nfc_dealer = null;
+        this.barcode_dealer = null;
+    }
+
+    set_nfc_dealer(fonction) {
+        this.nfc_dealer = fonction;
+    }
+
+    set_barcode_dealer(fonction) {
+        this.barcode_dealer = fonction;
+    }
+}
+
+var functionHolder = new FunctionHolder();
+
+function receive_message(message) {
+    if (typeof message === "object") {
+        if (message.nfc_result && functionHolder.nfc_dealer) {
+            functionHolder.nfc_dealer(message.nfc_result);
+        } else if (message.barcode_result && functionHolder.barcode_dealer) {
+            functionHolder.barcode_dealer(message.barcode_result);
+        }
+    }
+}
+
+function send_message(message) {
+    console.log("sending message: " + message);
+    if (window.AppInventor) {
+        window.AppInventor.setWebViewString(message);
+    }
+}
+
+function trigger_script() {
+    init_local();
+    if (!window.AppInventor) {
         document.body.style.maxWidth = "740px";
         document.body.style.margin = "auto";
         document.body.style.border = "1px solid black";
         document.body.style.borderRadius = "10px";
     }
-});
-
-function receive_message(message) {
-    // if message if type of a dictionary, set message as value
-    if (typeof message === "object") {
-        message = message.scan_result;
-    }
-    fetch("http://192.168.1.43/medisafe?scan_result=" + message)
-    //alert(message);
-}
-
-function send_message(message) {
-    window.AppInventor.setWebViewString(message);
 }
