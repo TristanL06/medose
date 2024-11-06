@@ -1,0 +1,38 @@
+name: Deploy to host
+
+on:
+  push:
+    branches:
+      - tristan-test
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment: 'prod'
+    env:
+      directory: './www/test/'
+      local-dir: './www/'
+
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Deploy to OVH Cloud
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
+        local-dir: ${{ env.local-dir }}
+        server-dir: ${{ env.directory }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.git
+          **/*.json
+          **/*.py
